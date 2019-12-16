@@ -1,5 +1,5 @@
 <?php
-include 'data.php';
+
 /*
 
    preuzimanje podataka iz drugog fajla include-ovanjem i prikaz
@@ -8,7 +8,7 @@ include 'data.php';
 ********************************************************************************
 
 1.1   podatke koje se nalaze u data priključiti ovom fajlu.
-
+include 'data.php';
 */
 
 
