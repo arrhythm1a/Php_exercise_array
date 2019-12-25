@@ -31,7 +31,7 @@ function Digitron($a, $b, $operator){
             }
 
     }
-  
+    return $result;
 
 }
 
