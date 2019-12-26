@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Online Apoteka</title>
+    </head>
+    <body>
+        <form action="apoteka.php" method="post">
+            <table border="1">
+                <tr>
+                    <td style="background-color: #999999">Artikal</td>
+                    <td style="background-color: #999999">Kolicina</td>
+                </tr>
+                <tr>
+                    <td>Andol</td>
+                    <td><input type="text" name="kolicina_andol"></td>
+                </tr>
+                <tr>
+                    <td>Aspirin</td>
+                    <td><input type="text" name="kolicina_aspirin" id="aspirin"></td>
+                </tr>
+                <tr>
+                    <td>Vitamin C</td>
+                    <td><input type="text" name="kolicina_vitaminc"></td>
+                </tr>
+                <tr>
+                    <td>Kako ste saznali za nasu apoeku ?</td>
+                    <td>
+                        <select name="marketing" id="">
+                            <option value="redovan">Ja sam redovan kupac</option>
+                            <option value="tv">TV reklama</option>
+                            <option value="oglasi">Halo oglasi</option>
+                        </select>
+                    </td>
+
+                </tr>
+
+            </table>
+            <input type="submit" name="naruci" id="naruci" value="Naruci">
+        </form>
+    </body>
+</html>
+
