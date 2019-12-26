@@ -1,13 +1,3 @@
-<?php
-
-
-
-if (isset($_POST['posalji'])){
-    $ime = $_POST['ime'];
-
-}
-
-?>
 
 <html>
     <head>
@@ -25,10 +15,14 @@ if (isset($_POST['posalji'])){
         </fieldset>
     </form>
     <?php
-        if (isset($_POST['posalji'])){
-            echo "<strong>$ime</strong>";
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+        $ime = $_POST['ime'];
+        echo $ime;
+        } else {
+            if (empty($ime)){
+                echo "Niste uneli ime!";
         }
+    }
     ?>
-
     </body>
 </html>
