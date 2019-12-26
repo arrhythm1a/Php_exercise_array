@@ -18,9 +18,9 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $ime = $_POST['ime'];
         echo $ime;
-        } else {
-            if (empty($ime)){
-                echo "Niste uneli ime!";
+       }else {
+          if (empty($ime)){
+             echo "Niste uneli ime!";
         }
     }
     ?>
