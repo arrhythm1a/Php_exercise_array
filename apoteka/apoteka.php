@@ -3,7 +3,9 @@ if (isset($_POST['naruci'])){
     $kolicina_andol = $_POST['kolicina_andol'];
     $kolicina_aspirin = $_POST['kolicina_aspirin'];
     $kolicina_vitaminc = $_POST['kolicina_vitaminc'];
+    $adresa_za_isporuku = $_POST['adresa_za_isporuku'];
     $pronadji = $_POST['marketing'];
+
 
 }
 ?>
@@ -57,9 +59,10 @@ if (isset($_POST['naruci'])){
         ?>
     </li>
 </ul>
+
 <?php
 $datum = date('l H:i');
 $narudzbine = fopen('../apoteka_narudzbine/narudzbine.txt', 'a+');
-fwrite($narudzbine, $datum . " Andol: " . $kolicina_andol . " Aspirin: " . $kolicina_aspirin . " VitaminC: " . $kolicina_vitaminc . " Adresa za isporuku: " . $adresa_za_isporuku . PHP_EOL);
+fwrite($narudzbine, $datum . " Andol: " . $kolicina_andol . " Aspirin: " . $kolicina_aspirin . " VitaminC: " . $kolicina_vitaminc . " " . sprintf('%0.2f', $ukupna_cena) . "RSD" . " Adresa za isporuku: " . $adresa_za_isporuku . PHP_EOL);
 fclose($narudzbine);
 ?>
