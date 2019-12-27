@@ -1,4 +1,5 @@
 <?php
+//Dodavanje vrednosti varijabli preko Super globalne promenljive $_POST
 if (isset($_POST['naruci'])){
     $kolicina_andol = $_POST['kolicina_andol'];
     $kolicina_aspirin = $_POST['kolicina_aspirin'];
@@ -35,6 +36,7 @@ if (isset($_POST['naruci'])){
     </li>
     <li>
         <?php
+//        Definisanje konstanti
         DEFINE('ANDOLCENA', 10);
         DEFINE('ASPIRINCENA', 50);
         DEFINE('VITAMINCCENA', 100);
@@ -59,7 +61,7 @@ if (isset($_POST['naruci'])){
         ?>
     </li>
 </ul>
-
+<!--Upisivanje porudzbina u ../apoteka_narudzbine/narudzbine.txt-->
 <?php
 $datum = date('l H:i');
 $narudzbine = fopen('../apoteka_narudzbine/narudzbine.txt', 'a+');
