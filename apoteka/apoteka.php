@@ -57,3 +57,9 @@ if (isset($_POST['naruci'])){
         ?>
     </li>
 </ul>
+<?php
+$datum = date('l H:i');
+$narudzbine = fopen('../apoteka_narudzbine/narudzbine.txt', 'a+');
+fwrite($narudzbine, $datum . " Andol: " . $kolicina_andol . " Aspirin: " . $kolicina_aspirin . " VitaminC: " . $kolicina_vitaminc . " Adresa za isporuku: " . $adresa_za_isporuku . PHP_EOL);
+fclose($narudzbine);
+?>
